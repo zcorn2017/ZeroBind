@@ -19,6 +19,12 @@ conda install -c conda-forge rdkit
 pip install graphein
 pip install fair-esm
 ```
+
+## Crawl the data
+```bash
+nohup python -u ./crawler.py > crawler.log &
+```
+
 ## Train
 Multiple hyperparameters can be selected in meta.py. 
 ```bash

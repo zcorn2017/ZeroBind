@@ -146,7 +146,7 @@ def train_molecules():
     np.random.seed(42)
     molecule_graphs={}
     molecule_labels={}
-    with open("../scaffold_split/protein_train.csv",'r')as f:
+    with open("./scaffold_split/protein_train.csv",'r')as f:
         reader=csv.reader(f)
         next(reader)
         for m,row in tqdm(enumerate(reader)):
@@ -178,7 +178,7 @@ def train_molecules():
 
     molecule_graphs={}
     molecule_labels={}
-    with open("../scaffold_split/protein_inductive.csv",'r')as f1:
+    with open("./scaffold_split/protein_inductive.csv",'r')as f1:
         reader=csv.reader(f1)
         next(reader)
         for row in tqdm(reader):
@@ -211,7 +211,7 @@ def train_molecules():
 def test_molecules():
     molecule_graphs = {}
     molecule_labels = {}
-    with open("../scaffold_split/protein_transductive.csv", 'r') as f1:
+    with open("./scaffold_split/protein_transductive.csv", 'r') as f1:
         reader = csv.reader(f1)
         next(reader)
         for row in tqdm(reader):
